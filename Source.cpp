@@ -36,12 +36,14 @@ void pause() {
 
 // MAIN
 void main() {
+for(int count = 1; cout <= 30; count++)
+{
 	cout << "Enter a three digit number. \n";
 	cin >> input;
 
-hundreds = (input / 100);
-tens  = (input - hundreds * 100) / 10;
-ones = (input - hundreds * 100 - (tens * 10));
+	hundreds = (input / 100);
+	tens  = (input - hundreds * 100) / 10;
+	ones = (input - hundreds * 100 - (tens * 10));
 
 	if (hundreds < tens && tens < ones) {
 		cout << "Ascending \n";
@@ -53,4 +55,5 @@ ones = (input - hundreds * 100 - (tens * 10));
 		cout << "Neither \n";
 	}
 	pause(); // pauses to see the displayed text
+}
 }
