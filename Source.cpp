@@ -46,14 +46,14 @@ for(int count = 1; cout <= 30; count++)
 	ones = (input - hundreds * 100 - (tens * 10));
 
 	if (hundreds < tens && tens < ones) {
-		cout << "Ascending \n";
+		cout << input << "is Ascending \n";
 	}
 	else if (hundreds > tens && tens > ones) {
-		cout << "Descending \n";
+		cout << input << "is Descending \n";
 	}
 	else {
-		cout << "Neither \n";
+		cout << input<< "is Neither ascending nor descending \n";
 	}
-	pause(); // pauses to see the displayed text
+	_getch(); // pauses to see the displayed text
 }
 }
