@@ -17,10 +17,10 @@ Three Digit Ascend Descend Selection
 using namespace std;
 
 //variables
-int x;
-int A;
-int B;
-int C;
+int input;
+int hundreds;
+int tens;
+int ones;
 
 // Functions()
 void pause() {
@@ -36,21 +36,24 @@ void pause() {
 
 // MAIN
 void main() {
+for(int count = 1; cout <= 30; count++)
+{
 	cout << "Enter a three digit number. \n";
-	cin >> x;
+	cin >> input;
 
-A = (x / 100);
-B = (x - A * 100) / 10;
-C = (x - A * 100 - (B * 10));
+	hundreds = (input / 100);
+	tens  = (input - hundreds * 100) / 10;
+	ones = (input - hundreds * 100 - (tens * 10));
 
-	if (A < B && B < C) {
-		cout << "Ascending \n";
+	if (hundreds < tens && tens < ones) {
+		cout << input << "is Ascending \n";
 	}
-	else if (A > B && B > C) {
-		cout << "Descending \n";
+	else if (hundreds > tens && tens > ones) {
+		cout << input << "is Descending \n";
 	}
 	else {
-		cout << "Neither \n";
+		cout << input<< "is Neither ascending nor descending \n";
 	}
-	pause(); // pauses to see the displayed text
+	_getch(); // pauses to see the displayed text
+}
 }
